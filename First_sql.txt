@@ -1,0 +1,10 @@
+
+select LEFT([ Name],(FIND([ Name],' '))) as first_name ,count(distinct order_id)
+from aus_sales 
+group by first_name;
+
+
+
+Splitting the names  calculation
+First name - LEFT([ Name],(FIND([ Name],' '))) 
+Last name - MID([ Name],FIND([Name],' '),LEN([ Name]))
