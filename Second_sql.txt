@@ -1,0 +1,5 @@
+select customer_id,max(sales) from orders
+where customer_id=
+(select customer_id from orders where
+product_subcategory=''Paper")
+group by customer_id
